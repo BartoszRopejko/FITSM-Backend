@@ -39,7 +39,7 @@ public class ConfigurationItemService {
             logger.info("Added new configuration item: " + configurationItem.toString());
             return ResponseEntity.ok(configurationItemRepository.save(configurationItem));
         }catch (Exception e){
-            logger.error("Exception occured during creating new configuration item: ");
+            logger.error("Exception occurred during creating new configuration item: ");
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e);
         }
@@ -55,7 +55,7 @@ public class ConfigurationItemService {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Configuration item: " + uuid + " not found.");
             }
         }catch (Exception e){
-            logger.error("Exception occured during creating new configuration item: ");
+            logger.error("Exception occurred during displaying configuration item: ");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e);
         }
     }

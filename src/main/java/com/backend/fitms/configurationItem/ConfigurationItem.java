@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -14,5 +15,6 @@ public class ConfigurationItem {
     private String name;
     @NotNull
     private String type;
+    @JoinColumn(name="uid", nullable=false)
     private String supportGroup;
 }
