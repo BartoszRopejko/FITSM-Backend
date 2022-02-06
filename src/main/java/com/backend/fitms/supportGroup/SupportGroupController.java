@@ -30,7 +30,7 @@ public class SupportGroupController {
     @PostMapping
     public ResponseEntity createConfigurationItem(@RequestBody SupportGroup supportGroup){
         UUID uuid = UUID.randomUUID();
-        supportGroup.setUid(uuid.toString());
+        supportGroup.setUuid(uuid.toString());
         return supportGroupService.saveSupportGroup(supportGroup);
     }
 }
