@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Data
 public class ConfigurationItem {
     @Id
-    private String uid;
+    private String uuid;
     private String name;
     @NotNull
     private String type;

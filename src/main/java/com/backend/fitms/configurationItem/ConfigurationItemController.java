@@ -25,7 +25,7 @@ public class ConfigurationItemController {
     @PostMapping
     public ResponseEntity createConfigurationItem(@RequestBody ConfigurationItem configurationItem){
         UUID uuid = UUID.randomUUID();
-        configurationItem.setUid(uuid.toString());
+        configurationItem.setUuid(uuid.toString());
         return configurationItemService.saveConfigurationItem(configurationItem);
     }
 
